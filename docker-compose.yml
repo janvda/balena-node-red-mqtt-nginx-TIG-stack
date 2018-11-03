@@ -7,3 +7,6 @@ services:
     image: telegraf:latest
     depends_on:
       - influxdb
+  grafana:
+    image: grafana/grafana
+
