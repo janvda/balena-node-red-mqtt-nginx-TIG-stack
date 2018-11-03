@@ -1,0 +1,9 @@
+version: '2'
+services:
+  influxdb:
+    image: influxdb:latest
+  telegraf:
+    # Full tag list: https://hub.docker.com/r/library/telegraf/tags/
+    image: telegraf:latest
+    depends_on:
+      - influxdb
