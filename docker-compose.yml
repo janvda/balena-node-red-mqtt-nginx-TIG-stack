@@ -31,5 +31,5 @@ services:
     depends_on:
       - influxdb
   grafana:
-    image: grafana/grafana
+    image: fg2it/grafana-armhf:latest
 
