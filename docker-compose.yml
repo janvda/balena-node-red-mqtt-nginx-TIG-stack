@@ -5,7 +5,7 @@ volumes:
     telegraf-config:
 services:
   influxdb:
-    image: influxdb:latest
+    image: arm32v7/influxdb:latest
     volumes:
       # Mount for influxdb data directory
       - 'influx-data:/var/lib/influxdb'
@@ -19,7 +19,7 @@ services:
       - "8089:8089"
   telegraf:
     # Full tag list: https://hub.docker.com/r/library/telegraf/tags/
-    image: telegraf:latest
+    image: arm32v7/telegraf:latest
     volumes:
       # Mount for telegraf configuration
        - 'telegraf-config:/etc/telegraf'
