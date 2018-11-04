@@ -1,7 +1,21 @@
 version: '2'
 services:
+  volumes:
+    influx-data:
+    influx-config:
   influxdb:
     image: influxdb:latest
+    volumes:
+      # Mount for influxdb data directory
+      - 'influx-data:/var/lib/influxdb'
+      # Mount for influxdb configuration
+      - 'influx-config/:/etc/influxdb/'
+    ports:
+      # The API for InfluxDB is served on port 8086
+      - "8086:8086"
+      - "8082:8082"
+      # UDP Port
+      - "8089:8089"
   telegraf:
     # Full tag list: https://hub.docker.com/r/library/telegraf/tags/
     image: telegraf:latest
