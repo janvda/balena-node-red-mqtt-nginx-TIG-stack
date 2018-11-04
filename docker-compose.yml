@@ -2,6 +2,7 @@ version: '2'
 volumes:
     influx-data:
     influx-config:
+    telegraf-config:
 services:
   influxdb:
     image: influxdb:latest
@@ -19,6 +20,14 @@ services:
   telegraf:
     # Full tag list: https://hub.docker.com/r/library/telegraf/tags/
     image: telegraf:latest
+    volumes:
+      # Mount for telegraf configuration
+       - 'telegraf-config:/etc/telegraf'
+    pid: "host"
+    network_mode: "host"
+    privileged: true
+    labels:
+      io.resin.features.balena-socket: '1'
     depends_on:
       - influxdb
   grafana:
