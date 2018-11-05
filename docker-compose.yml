@@ -24,6 +24,7 @@ services:
     volumes:
       # Mount for telegraf configuration
        - 'telegraf-config:/etc/telegraf'
+       - /var/run/docker.sock:/var/run/docker.sock
     pid: "host"
     network_mode: "host"
     privileged: true
