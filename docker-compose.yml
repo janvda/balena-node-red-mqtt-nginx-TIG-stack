@@ -2,7 +2,6 @@ version: '2'
 volumes:
     influx-data:
     influx-config:
-    telegraf-config:
 services:
   influxdb:
     image: arm32v7/influxdb:latest
@@ -21,9 +20,6 @@ services:
   telegraf:
     # Full tag list: https://hub.docker.com/r/library/telegraf/tags/
     build : telegraf
-    volumes:
-      # Mount for telegraf configuration
-       - 'telegraf-config:/etc/telegraf'
     pid: "host"
     network_mode: "host"
     privileged: true
