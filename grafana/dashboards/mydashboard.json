@@ -1,7 +1,7 @@
 {
   "__inputs": [
     {
-      "name": "telegraf",
+      "name": "${DS_TELEGRAF}",
       "label": "telegraf",
       "description": "",
       "type": "datasource",
