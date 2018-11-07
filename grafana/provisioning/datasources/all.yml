@@ -1,0 +1,20 @@
+# config file version
+apiVersion: 1
+    
+#see http://docs.grafana.org/administration/provisioning/
+datasources:
+- name: 'telegraf'
+  type: 'InfluxDB'
+  access: 'direct'
+  org_id: 1
+  url: 'http://influxdb:8086'
+  # <string> database password, if used
+  password:root
+  # <string> database user, if used
+  user:root
+  # <string> database name, if used
+  database:telegraf
+  # <bool> enable/disable basic auth
+  is_default: true
+  version: 1
+  editable: true
