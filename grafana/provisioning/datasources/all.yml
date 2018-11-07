@@ -9,11 +9,11 @@ datasources:
   org_id: 1
   url: 'http://influxdb:8086'
   # <string> database password, if used
-  password:root
+  password: 'root'
   # <string> database user, if used
-  user:root
+  user: 'root'
   # <string> database name, if used
-  database:telegraf
+  database: 'telegraf'
   # <bool> enable/disable basic auth
   is_default: true
   version: 1
