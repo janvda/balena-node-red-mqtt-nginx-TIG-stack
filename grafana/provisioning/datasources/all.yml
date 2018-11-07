@@ -3,7 +3,7 @@ apiVersion: 1
     
 #see http://docs.grafana.org/administration/provisioning/
 datasources:
-- name: 'telegraf'
+- name: 'DS_TELEGRAF'
   type: 'InfluxDB'
   access: 'direct'
   org_id: 1
