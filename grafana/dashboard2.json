@@ -59,7 +59,7 @@
   "gnetId": 1138,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1541530061391,
+  "iteration": 1541576205367,
   "links": [],
   "panels": [
     {
@@ -1386,6 +1386,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
           "resultFormat": "time_series",
@@ -1431,6 +1432,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "C",
           "resultFormat": "time_series",
@@ -1481,7 +1483,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
@@ -1489,7 +1491,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         }
       ],
@@ -1558,6 +1560,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
           "resultFormat": "time_series",
@@ -1603,6 +1606,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
           "resultFormat": "time_series",
@@ -1648,6 +1652,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "C",
           "resultFormat": "time_series",
@@ -1693,6 +1698,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "D",
           "resultFormat": "time_series",
@@ -1743,7 +1749,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
@@ -1751,7 +1757,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         }
       ],
@@ -2523,5 +2529,5 @@
   "timezone": "browser",
   "title": "InfluxDB",
   "uid": "Onc9CsWgk",
-  "version": 5
+  "version": 6
 }
