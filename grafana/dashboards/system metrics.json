@@ -18,7 +18,7 @@
   "gnetId": 1138,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1541697491303,
+  "iteration": 1541715265731,
   "links": [],
   "panels": [
     {
@@ -1049,6 +1049,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2440",
           "format": "short",
           "label": "",
           "logBase": 1,
@@ -1057,11 +1058,193 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2441",
           "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "telegraf_ds",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 15,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "$$hashKey": "object:416",
+          "alias": "used",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "disk",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "used"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "path",
+              "operator": "=",
+              "value": "/"
+            },
+            {
+              "condition": "AND",
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        },
+        {
+          "$$hashKey": "object:465",
+          "alias": "free",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "disk",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "free"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "path",
+              "operator": "=",
+              "value": "/"
+            },
+            {
+              "condition": "AND",
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Disk (SD card)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:522",
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:523",
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
           "show": true
         }
       ],
@@ -1087,7 +1270,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 18
       },
       "id": 4,
       "legend": {
@@ -1122,6 +1305,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:3128",
           "alias": "Load 1m",
           "dsType": "influxdb",
           "groupBy": [
@@ -1139,6 +1323,7 @@
             }
           ],
           "measurement": "system",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
           "resultFormat": "time_series",
@@ -1165,6 +1350,7 @@
           ]
         },
         {
+          "$$hashKey": "object:3129",
           "alias": "Load 5m",
           "dsType": "influxdb",
           "groupBy": [
@@ -1182,6 +1368,7 @@
             }
           ],
           "measurement": "system",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
           "resultFormat": "time_series",
@@ -1208,6 +1395,7 @@
           ]
         },
         {
+          "$$hashKey": "object:3130",
           "alias": "Load 15m",
           "dsType": "influxdb",
           "groupBy": [
@@ -1225,6 +1413,7 @@
             }
           ],
           "measurement": "system",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "C",
           "resultFormat": "time_series",
@@ -1271,7 +1460,8 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "$$hashKey": "object:3260",
+          "format": "percent",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1279,6 +1469,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3261",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1308,7 +1499,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 25
       },
       "id": 8,
       "legend": {
@@ -1478,7 +1669,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 25
       },
       "id": 9,
       "legend": {
@@ -1750,7 +1941,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 32
       },
       "id": 12,
       "legend": {
@@ -1955,7 +2146,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 39
       },
       "id": 10,
       "legend": {
@@ -2265,7 +2456,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 34
+        "y": 39
       },
       "id": 11,
       "legend": {
@@ -2451,6 +2642,7 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "997563c",
           "value": "997563c"
         },
@@ -2474,8 +2666,8 @@
     ]
   },
   "time": {
-    "from": "now-1h",
-    "to": "now"
+    "from": "now/d",
+    "to": "now/d"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -2503,7 +2695,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Dashboard arm telegraph",
+  "title": "system metrics",
   "uid": "PkPmjrZRk",
   "version": 1
 }
