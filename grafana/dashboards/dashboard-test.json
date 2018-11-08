@@ -1,34 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_TELEGRAF_DS",
-      "label": "telegraf_ds",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.1.4"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -45,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -53,7 +23,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_TELEGRAF_DS}",
+      "datasource": "telegraf_ds",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -84,6 +54,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:174",
           "groupBy": [
             {
               "params": [
@@ -199,5 +170,5 @@
   "timezone": "",
   "title": "dashboard-simple-test-1",
   "uid": "CK91g9WRz",
-  "version": 3
+  "version": 1
 }
