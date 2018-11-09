@@ -10,5 +10,5 @@ It consists of the following three docker containers (= TIG stack)
 
 The Grafana user interface can be accessed (login and password is `admin`) through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  This means that you can access your Grafana dashboards wherever you have internet access !
 
-(/system_metrics_dashboard.png)
-      
+![system metrics example](./system_metrics_dashboard.png)
+
