@@ -1,4 +1,4 @@
-# Edge Device (e.g. rapsberry pi) Monitoring by means of composite docker application on Balena OS.
+# Edge Device (e.g. raspberry pi) Monitoring by means of composite docker application on [Balena OS](https://www.balena.io/os/).
 
 This composite docker application monitors the system resources of the device where it is deployed on.  This application can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).
 
