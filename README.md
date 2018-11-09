@@ -4,9 +4,9 @@ This repository describes a composite docker application that monitors the syste
 
 It consists of the following three docker containers (= TIG stack)
 
-1. Telegraf
-2. Influxdb
-3. Grafana
+1. [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) - agent for collecting and reporting metrics and events
+2. [Influxdb](https://www.influxdata.com/) - Time Series Database
+3. [Grafana](https://grafana.com/) - create, explore and share dashboards
 
 The Grafana user interface can be accessed (login and password is `admin`) at port 80 of the host OS.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
 
@@ -29,5 +29,10 @@ If you want to add a new Grafana dashboard then this can be done through followi
 1. Create the new dashboard using the Grafana UI.
 2. From the settings menu in Grafana UI select `View JSON` and copy the complete json file (**don't use the grafana UI `export` feature** as this will template the datasource and will not work due to that).
 3. Save the json contents you have copied in previous step into a new file in folder `grafana\dashboards` with extension .json  (e.g. `mydashboard-02.json`)
-4. Substitute the ID number you can find in that file just after field `"graphTooltip"` by `null`.  E.g. ` "id": 1,` should be changed into ` "id": null,`
+4. Substitute the ID number you can fiInfluxDB system metrics dashboard]nd in that file just after field `"graphTooltip"` by `null`.  E.g. ` "id": 1,` should be changed into ` "id": null,`
 5. Commit your changes in git and push them to your balena git remote endpoint (`git push balena master`)
+
+## Credits
+1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)
+2. [InfluxDB system metrics dashboard](https://grafana.com/dashboards/1138)
+3. [Grafana Series Part 1: Setting up InfluxDB, Grafana and Telegraf with Docker on Linux](https://blog.linuxserver.io/2017/11/25/how-to-monitor-your-server-using-grafana-influxdb-and-telegraf/)
