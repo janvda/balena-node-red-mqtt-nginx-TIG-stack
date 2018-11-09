@@ -8,7 +8,9 @@ It consists of the following three docker containers (= TIG stack)
 2. Influxdb
 3. Grafana
 
-The Grafana user interface can be accessed (login and password is `admin`) through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  This means that you can access your Grafana dashboards wherever you have internet access !
+The Grafana user interface can be accessed (login and password is `admin`) at port 80 of the host OS.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
+
+Here below a screenshot of the dashboard that is also provisioned by this application ( file is `grafana\dashboards\system metrics.json`)
 
 ![system metrics example](./system_metrics_dashboard.png)
 
