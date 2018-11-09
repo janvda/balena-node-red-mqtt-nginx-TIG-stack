@@ -17,7 +17,10 @@ Here below a screenshot of the `system metrics` dashboard that is also provision
 ## Deployment of this application to an edge device
 
 1. you need a BalenaCloud account and your edge device must be running the BalenaOS
-1. clone this github repository:
+2. clone this github repository
+3. Move into this repository by command `cd balena-edge-device-monitoring`
+4. Link this repository to balena
+5. push the repository to balena
 
 ## Updating / Adding new Grafana Dashboards
 
