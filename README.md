@@ -24,7 +24,7 @@ This application can easily be installed through following steps:
 
 ## Updating / Adding new Grafana Dashboards
 
-If you want to add a new Grafana dashboard then this can be done through following steps (Updating happens in a similar way):
+If you want to add a new Grafana dashboard then this can be done through following steps (Updating an existing dashboard can be done in a similar way):
 
 1. Create the new dashboard using the Grafana UI.
 2. From the settings menu in Grafana UI select `View JSON` and copy the complete json file (**don't use the grafana UI `export` feature** as this will template the datasource and will not work due to that).
