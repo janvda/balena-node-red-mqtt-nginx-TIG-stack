@@ -14,12 +14,16 @@ Here below a screenshot of the `system metrics` dashboard that is also provision
 
 ![system metrics example](./system_metrics_dashboard.png)
 
+## Deployment of this application to an edge device
+
+1. TO BE DONE
+
 ## Updating / Adding new Grafana Dashboards
 
-If you want to add a new Grafana Dashboard then this can be done through following steps (Updating happens in a similar way):
+If you want to add a new Grafana dashboard then this can be done through following steps (Updating happens in a similar way):
 
-1. Create the dashboard in Grafana
-2. From the settings menu in Grafana select `View JSON` and copy the complete json file (**don't use the grafana `export` feature** as this will template the datasource and will not work due to that).
-3. Create a file with extension `.json` in folder `grafana\dashboards` and paste the json contents you have copied in previous step into this file.
-4. Changes replace the ID number by null.  E.g. ` "id": 1,` should be changed into ` "id": null,`
+1. Create the new dashboard using the Grafana UI.
+2. From the settings menu in Grafana UI select `View JSON` and copy the complete json file (**don't use the grafana UI `export` feature** as this will template the datasource and will not work due to that).
+3. Save the json contents you have copied in previous step into a new file in folder `grafana\dashboards` with extension .json  (e.g. `mydashboard-02.json`)
+4. Substitute the ID number you can find in that file just after field `"graphTooltip"` by `null`.  E.g. ` "id": 1,` should be changed into ` "id": null,`
 5. Commit your changes and push them to Balena Cloud.
