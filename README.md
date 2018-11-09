@@ -14,3 +14,10 @@ Here below a screenshot of the dashboard that is also provisioned by this applic
 
 ![system metrics example](./system_metrics_dashboard.png)
 
+## Provisioning Grafana Dashboards
+
+If you want to add or update a Grafana Dashboard then this can be done through following steps:
+
+1. Create (or Update) the dashboard in Grafana
+2. From the settings menu in Grafana select `View JSON` and copy the complete json file
+3. Create a file with extension `.json` in folder `grafana\dashboards` and ....
