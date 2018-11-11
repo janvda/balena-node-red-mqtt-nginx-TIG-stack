@@ -39,6 +39,8 @@ services:
     image: tobi312/rpi-nginx
     depends_on:
       - grafana
+    links:
+      - grafana
     ports:
        - "80:80"
        - "443:443"
