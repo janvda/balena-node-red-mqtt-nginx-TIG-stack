@@ -2,11 +2,12 @@
 
 This repository describes a composite docker application that monitors the system resources of the device where it is deployed on.  This application can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).
 
-It consists of the following three docker containers (= TIG stack)
+It consists of the following four docker containers (= TIG stack + nginx)
 
 1. [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) - agent for collecting and reporting metrics and events
 2. [Influxdb](https://www.influxdata.com/) - Time Series Database
 3. [Grafana](https://grafana.com/) - create, explore and share dashboards
+4. [nginx](http://nginx.org/en/docs/) - configured as reverse-proxyserver so that the default http port / https port becomes routed to grafana (3000 port).
 
 The Grafana user interface can be accessed (login and password is `admin`) at port 80 of the host OS.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
 
