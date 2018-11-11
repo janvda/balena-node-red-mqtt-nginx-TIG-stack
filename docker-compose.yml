@@ -31,8 +31,16 @@ services:
   grafana:
     build: grafana
     ports:
-       - "80:3000"
+       - "3000:3000"
     links:
        - influxdb
+    restart: always
+  nginx:
+    image: tobi312/rpi-nginx
+    depends_on:
+      - grafana
+    ports:
+       - "80:80"
+       - "443:443"
     restart: always
 
