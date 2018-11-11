@@ -33,6 +33,6 @@ If you want to add a new Grafana dashboard then this can be done through followi
 5. Commit your changes in git and push them to your balena git remote endpoint (`git push balena master`)
 
 ## Credits
-1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)
+1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)  [(github repository)](https://github.com/cirocosta/sample-grafana)
 2. [InfluxDB system metrics dashboard](https://grafana.com/dashboards/1138)
 3. [Grafana Series Part 1: Setting up InfluxDB, Grafana and Telegraf with Docker on Linux](https://blog.linuxserver.io/2017/11/25/how-to-monitor-your-server-using-grafana-influxdb-and-telegraf/)
