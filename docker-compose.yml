@@ -35,6 +35,11 @@ services:
     links:
        - influxdb
     restart: always
+  node-red:
+    build: node-red
+    ports:
+       - "1880:1880"
+    restart: always
   nginx:
     image: tobi312/rpi-nginx
     depends_on:
