@@ -44,8 +44,10 @@ services:
     image: tobi312/rpi-nginx
     depends_on:
       - grafana
+      - node-red
     links:
       - grafana
+      - node-red
     ports:
        - "80:80"
        - "443:443"
