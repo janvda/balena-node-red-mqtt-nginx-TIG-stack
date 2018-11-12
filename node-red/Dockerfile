@@ -4,6 +4,10 @@ FROM nodered/node-red-docker:rpi-v8
 #RUN sudo setcap 'cap_net_bind_service=+ep'  $(eval readlink -f `which node`)
 #USER node-red
 #COPY settings.js /data
+
+# installing an editor
+RUN apt-get update && apt-get install nano
+
 RUN npm install node-red-contrib-resinio
 RUN npm install node-red-dashboard
 RUN npm install node-red-contrib-credentials
