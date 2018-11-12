@@ -36,7 +36,7 @@ services:
        - influxdb
     restart: always
   nginx:
-    image: tobi312/rpi-nginx
+    build : nginx
     depends_on:
       - grafana
     links:
