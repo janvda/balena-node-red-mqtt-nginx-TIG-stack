@@ -6,7 +6,7 @@ FROM nodered/node-red-docker:rpi-v8
 #COPY settings.js /data
 
 # installing an editor
-USER ROOT
+USER root
 RUN apt-get update && apt-get install nano
 USER node-red
 
