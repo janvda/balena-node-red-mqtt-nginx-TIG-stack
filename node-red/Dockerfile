@@ -1,14 +1,10 @@
 FROM nodered/node-red-docker:rpi-v8
-# following instructions allow node-red to listen to port 80.
-#USER root
-#RUN sudo setcap 'cap_net_bind_service=+ep'  $(eval readlink -f `which node`)
-#USER node-red
-#COPY settings.js /data
 
 # installing an editor
 USER root
 RUN apt-get update && apt-get install nano
 USER node-red
+COPY ./settings.js /data/settings.js
 
 RUN npm install node-red-contrib-resinio
 RUN npm install node-red-dashboard
