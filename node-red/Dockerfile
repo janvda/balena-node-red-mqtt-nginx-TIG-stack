@@ -6,7 +6,9 @@ FROM nodered/node-red-docker:rpi-v8
 #COPY settings.js /data
 
 # installing an editor
-RUN sudo apt-get update && sudo apt-get install nano
+USER ROOT
+RUN apt-get update && apt-get install nano
+USER node-red
 
 RUN npm install node-red-contrib-resinio
 RUN npm install node-red-dashboard
