@@ -35,10 +35,16 @@ services:
     links:
        - influxdb
     restart: always
+  mqtt:
+    image: panuwitp/mosquitto-arm
+    ports:
+      - "1883:1883 "
   node-red:
     build: node-red
     ports:
        - "1880:1880"
+    links:
+        - mqtt
     restart: always
   nginx:
     build : nginx
