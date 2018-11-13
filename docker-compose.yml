@@ -32,7 +32,7 @@ services:
     build: grafana 
     ports:
        - "3000:3000"
-    depends on:
+    depends_on:
        - influxdb
     restart: always
   mqtt:
@@ -47,14 +47,14 @@ services:
     build: node-red
     ports:
        - "1880:1880"
-    depends on:
+    depends_on:
         - mqtt
     restart: always
   node-red-test:
     build: node-red
     ports:
        - "1882:1880"
-    depends on:
+    depends_on:
         - mqtt-test
     restart: always
   nginx:
