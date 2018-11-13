@@ -38,7 +38,7 @@ services:
   mqtt:
     image: panuwitp/mosquitto-arm
     ports:
-      - "1883:1883 "
+      - "1883:1883"
   node-red:
     build: node-red
     ports:
