@@ -48,14 +48,14 @@ services:
     ports:
        - "1880:1880"
     links:
-        - "mqtt"
+        - "mqtt:mqtt-broker"
     restart: always
   node-red-test:
     build: node-red
     ports:
        - "1882:1880"
     links:
-        - "mqtt-test:mqtt"
+        - "mqtt-test:mqtt-broker"
     restart: always
   nginx:
     build : nginx
