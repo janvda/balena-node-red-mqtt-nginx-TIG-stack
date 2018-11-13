@@ -39,12 +39,23 @@ services:
     image: panuwitp/mosquitto-arm
     ports:
       - "1883:1883"
+  mqtt-test:
+    image: panuwitp/mosquitto-arm
+    ports:
+      - "1884:1883"
   node-red:
     build: node-red
     ports:
        - "1880:1880"
     links:
-        - mqtt
+        - "mqtt"
+    restart: always
+  node-red-test:
+    build: node-red
+    ports:
+       - "1882:1880"
+    links:
+        - "mqtt-test:mqtt"
     restart: always
   nginx:
     build : nginx
