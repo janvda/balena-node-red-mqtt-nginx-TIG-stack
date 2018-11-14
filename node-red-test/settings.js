@@ -177,11 +177,19 @@ module.exports = {
     //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
    
    editorTheme: {
+		    page: {
+            title: "Node-RED Test"
+            # favicon: "/usr/src/app/assets/favicon.ico"
+        },
+        header: {
+            title: "Node-RED Test"
+            #image: "/usr/src/app/assets/resin_logo.png", // or null to remove image
+            #url: "https://resin.io"
+        },
        projects: {
            enabled: true
        }
    },
-
 
     // Configure the logging output
     logging: {
