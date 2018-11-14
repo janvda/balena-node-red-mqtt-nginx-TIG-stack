@@ -182,7 +182,7 @@ module.exports = {
             // favicon: "/usr/src/app/assets/favicon.ico"
         },
         header: {
-            title: "Node-RED Test"
+            title: "Node-RED Test",
             // image: "/usr/src/app/assets/resin_logo.png", // or null to remove image
             url: "https://github.com/janvda/balena-edge-device-monitoring/blob/node-red/README.md"
         },
