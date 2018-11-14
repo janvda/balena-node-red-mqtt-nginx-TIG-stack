@@ -77,7 +77,7 @@ module.exports = {
     // The following property can be used in place of 'httpAdminRoot' and 'httpNodeRoot',
     // to apply the same root to both parts.
 		// JVA 2018-11-12: activated httpRoot
-    httpRoot: '/node-red',
+    httpRoot: '/node-red-test',
 
     // When httpAdminRoot is used to move the UI to a different root path, the
     // following property can be used to identify a directory of static content

@@ -50,12 +50,16 @@ services:
     depends_on:
         - mqtt
     restart: always
+    environment:
+         - httpRootEnv=noderedX
   node-red-test:
-    build: node-red
+    build: node-red-test
     ports:
        - "1882:1880"
     depends_on:
         - mqtt-test
+    environment:
+         - httpRootEnv=noderedX-test
     restart: always
   nginx:
     build : nginx
