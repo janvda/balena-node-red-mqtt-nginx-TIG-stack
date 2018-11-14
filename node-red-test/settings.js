@@ -179,12 +179,12 @@ module.exports = {
    editorTheme: {
 		    page: {
             title: "Node-RED Test"
-            # favicon: "/usr/src/app/assets/favicon.ico"
+            // favicon: "/usr/src/app/assets/favicon.ico"
         },
         header: {
             title: "Node-RED Test"
-            #image: "/usr/src/app/assets/resin_logo.png", // or null to remove image
-            #url: "https://resin.io"
+            // image: "/usr/src/app/assets/resin_logo.png", // or null to remove image
+            // url: "https://resin.io"
         },
        projects: {
            enabled: true
