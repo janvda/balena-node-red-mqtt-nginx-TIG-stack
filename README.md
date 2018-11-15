@@ -1,6 +1,6 @@
-# Composite docker application with "8" containers (2x Node-RED, 2x MQTT broker, Telegraf, InfluxDb, Grafana, Nginx) deployed on Raspberry Pi through [Balena](https://www.balena.io).
+# Composite docker application with "8" containers (_2x Node-RED, 2x MQTT broker, Telegraf, InfluxDb, Grafana, Nginx_) deployed on Raspberry Pi through [Balena](https://www.balena.io).
 
-The "node-red" branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).  This application runs 2 Node-RED instances and 2 MQTT brokers (=mosquitto) instances.   
+The "node-red" branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).     
 
 that monitors the system resources of the device where it is deployed on.  This application can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).
 
@@ -16,6 +16,9 @@ The application consists of the following 8 docker containers (= TIG stack + 2x 
 4. [nginx](http://nginx.org/en/docs/) - configured as reverse-proxyserver so that the http/https request becomes routed to grafana (port 30000) and the http/https request for path `/node-red` become routed to node-red (port 1880).
 
 ![build finished successful](./build%20finished%20successful.png)
+
+## System resource monitoring by the TIG Stack (Telegraf, Influxdb & Grafana)
+The Telegraf container will monitor the system resources (memory, CPU, disk, network, ...) of the raspberry pi device and send them to the Influxdb container that will store it in an influx datbase.  Grafana container has a dashboard `system metrics` that gets its data from the influx database.
 
 The Grafana user interface can directly be accessed (login and password is `admin`) at port 80 of the host OS thanks to reverse-proxyserver ningx.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
 
