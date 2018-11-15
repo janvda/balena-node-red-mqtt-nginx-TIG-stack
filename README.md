@@ -1,8 +1,10 @@
-# Edge device (e.g. raspberry pi) monitoring by means of a composite docker application on [Balena OS](https://www.balena.io/os/).
+# Composite docker application with 8 containers (Node-RED, MQTT broker, Telegraf, InfluxDb, Grafana, Nginx) deployed on raspberry pi running [Balena OS](https://www.balena.io/os/).
 
 This repository describes a composite docker application that monitors the system resources of the device where it is deployed on.  This application can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).
 
-It consists of the following 5 docker containers (= TIG stack + Node-RED + nginx )
+TO BE FURTHER UPDATED
+
+It consists of the following 8 docker containers (= TIG stack + Node-RED + nginx )
 
 1. [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) - agent for collecting and reporting metrics and events
 2. [Influxdb](https://www.influxdata.com/) - Time Series Database
