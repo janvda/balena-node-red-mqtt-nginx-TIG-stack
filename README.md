@@ -1,10 +1,6 @@
-# Composite docker application with "8" containers (2x Node-RED, 2x MQTT broker, Telegraf, InfluxDb, Grafana, Nginx) deployed on Raspberry Pi through [Balena](https://www.balena.io).
+# Composite docker application with _"8"_ containers (2x Node-RED, 2x MQTT broker, Telegraf, InfluxDb, Grafana, Nginx) deployed on Raspberry Pi through [Balena](https://www.balena.io).
 
 The "node-red" branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).     
-
-that monitors the system resources of the device where it is deployed on.  This application can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).
-
-TO BE FURTHER UPDATED
 
 The application consists of the following 8 docker containers (= TIG stack + 2x Node-RED + 2x MQTT broker +  Nginx )
 
