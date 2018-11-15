@@ -14,7 +14,10 @@ The application consists of the following 8 docker containers (= TIG stack + 2x 
 ![build finished successful](./build%20finished%20successful.png)
 
 ## System resource monitoring by the TIG Stack (Telegraf, Influxdb & Grafana)
-The Telegraf container will monitor the system resources (memory, CPU, disk, network, ...) of the raspberry pi device and send them to the Influxdb container that will store it in an influx datbase.  Grafana container has a dashboard `system metrics` that gets its data from the influx database.
+The system resource monitoring is realized by the TIG stack and happens as follows:
+1. The *Telegraf* container will monitor the system resources (memory, CPU, disk, network, ...) of the raspberry pi device and send them to 
+2. the *Influxdb* container that will store it in an influx datbase.  
+4. The *Grafana* container has a dashboard `system metrics` that retrieves its data from the same influx database
 
 The Grafana user interface can directly be accessed (login and password is `admin`) at port 80 of the host OS thanks to reverse-proxyserver ningx.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
 
