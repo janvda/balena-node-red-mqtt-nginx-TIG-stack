@@ -4,7 +4,7 @@ volumes:
     influx-config:
 services:
   influxdb:
-    image: arm32v7/influxdb:latest
+    build: influxdb
     volumes:
       # Mount for influxdb data directory
       - 'influx-data:/var/lib/influxdb'
