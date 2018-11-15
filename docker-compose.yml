@@ -3,11 +3,6 @@ volumes:
     influx-data:
     influx-config:
 services:
-  nfsd:
-    image: itsthenetwork/nfs-server-alpine:latest-arm
-    privileged: true
-    environment:
-      - SHARED_DIRECTORY=/nfsshare
   influxdb:
     build: influxdb
     # privileged added so usb drive can be mounted.
