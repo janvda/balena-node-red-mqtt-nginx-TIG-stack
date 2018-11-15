@@ -11,7 +11,7 @@ services:
       # Mount for influxdb data directory
       - 'influx-data:/var/lib/influxdb'
       # Mount for influxdb configuration
-      - 'influx-config:/etc/influxdb/'
+      # 'influx-config:/etc/influxdb/'
     ports:
       # The API for InfluxDB is served on port 8086
       - "8086:8086"
