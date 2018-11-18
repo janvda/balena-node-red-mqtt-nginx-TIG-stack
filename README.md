@@ -4,7 +4,7 @@
 This project is actually a proof of concept to demonstrate the following features:
 1. The ability to run many containers on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) (see [1. What](#1-what)).
 2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/)
-3. Monitoring the system resources of the raspberry pi based on **TIG** stack = 
+3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 2.](https://github.com/janvda/balena-edge-device-monitoring/blob/node-red/README.md#2-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
    - [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) for collecting metrics
    - [Influxdb](https://www.influxdata.com/) - Time Series Database used for storing the metrics
    - [Grafana](https://grafana.com/) - create, explore and share dashboards
@@ -29,7 +29,7 @@ The application consists of the following 8 docker containers (= TIG stack + 2x 
 
 ![build finished successful](./build%20finished%20successful.png)
 
-## 2. System resource monitoring through the TIG Stack (Telegraf, Influxdb & Grafana)
+## 2. System resource monitoring using the TIG Stack (Telegraf, Influxdb & Grafana)
 The system resource monitoring is realized by the TIG stack and happens as follows:
 1. The *Telegraf* container will monitor the system resources (memory, CPU, disk, network, ...) of the raspberry pi device and send them to 
 2. the *Influxdb* container that will store it in an influx database.  
