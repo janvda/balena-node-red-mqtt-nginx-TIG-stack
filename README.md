@@ -2,7 +2,7 @@
 
 ## Features
 This project is actually a proof of concept to demonstrate the following features:
-1. The ability to run [many containers](#what) on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
+1. The ability to run many containers (see [Section 1. What](#1-what) on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/)
 3. Monitoring the system resources of the raspberry pi based on **TIG** stack = 
    - [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) for collecting metrics
@@ -14,7 +14,7 @@ This project is actually a proof of concept to demonstrate the following feature
 7. A USB memory stick connected to the pi can be used for storing specific data (in this case it is the influxdb data)
 8. It is possible to access the Grafana user interface and the 2 Node-RED editors over the internet by enabling the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container.
 
-## What
+## 1. What
 
 The `node-red` branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).     
 
