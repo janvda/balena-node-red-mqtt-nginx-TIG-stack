@@ -29,7 +29,7 @@ The application consists of the following 8 docker containers (= TIG stack + 2x 
 
 ![build finished successful](./build%20finished%20successful.png)
 
-## System resource monitoring by the TIG Stack (Telegraf, Influxdb & Grafana)
+## 2. System resource monitoring through the TIG Stack (Telegraf, Influxdb & Grafana)
 The system resource monitoring is realized by the TIG stack and happens as follows:
 1. The *Telegraf* container will monitor the system resources (memory, CPU, disk, network, ...) of the raspberry pi device and send them to 
 2. the *Influxdb* container that will store it in an influx database.  
