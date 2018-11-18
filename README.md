@@ -3,9 +3,12 @@
 ## Features
 This project is actually a proof of concept to demonstrate the following features:
 1. The ability to run many containers on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
-2. Monitoring the system resources of the raspberry pi and displaying it in a nice dashboard.
 2. Build and Deploying this multi container application using the [BalenaCloud](https://www.balena.io/)
-3. 
+3. Monitoring the system resources of the raspberry pi based on **TIG** stack = 
+   - [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) for collecting metrics
+   - [Influxdb](https://www.influxdata.com/) - Time Series Database for storing the metrics
+   - [Grafana](https://grafana.com/) - create, explore and share dashboards
+4. ...
 
 ## What
 
