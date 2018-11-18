@@ -2,7 +2,7 @@
 
 ## Features
 This project is actually a proof of concept to demonstrate the following features:
-1. The ability to run many containers on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
+1. The ability to run [many containers](##What) on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/)
 3. Monitoring the system resources of the raspberry pi based on **TIG** stack = 
    - [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) for collecting metrics
