@@ -6,9 +6,13 @@ This project is actually a proof of concept to demonstrate the following feature
 2. Build and Deploying this multi container application using the [BalenaCloud](https://www.balena.io/)
 3. Monitoring the system resources of the raspberry pi based on **TIG** stack = 
    - [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) for collecting metrics
-   - [Influxdb](https://www.influxdata.com/) - Time Series Database for storing the metrics
+   - [Influxdb](https://www.influxdata.com/) - Time Series Database used for storing the metrics
    - [Grafana](https://grafana.com/) - create, explore and share dashboards
-4. ...
+4. That [Grafana](https://grafana.com/) is very nice and powerful tool to create dashboards and that it is easy to create or update those dashboards.
+5. Run multiple Node-RED instances on the same device
+6. Run multiple MQTT brokers on the same device.
+7. Use a USB memory stick connected to the pi for storing specific data (in this case it is the influxdb data)
+8. being able to access Grafana user interface and the 2 Node-RED editors over the internet by usingn the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container.
 
 ## What
 
