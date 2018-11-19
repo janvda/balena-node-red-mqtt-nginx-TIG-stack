@@ -1,6 +1,7 @@
 version: '2'
 volumes:
-    influx-data:
+    node-red-data:
+    node-red-test-data:
 services:
   influxdb:
     build: influxdb
@@ -46,6 +47,8 @@ services:
       - "1884:1883"
   node-red:
     build: node-red
+    volumes:
+       - 'node-red-data:/data'
     ports:
        - "1880:1880"
     depends_on:
@@ -53,6 +56,8 @@ services:
     restart: always
   node-red-test:
     build: node-red-test
+    volumes:
+       - 'node-red-test-data:/data'
     ports:
        - "1882:1880"
     depends_on:
