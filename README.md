@@ -61,11 +61,17 @@ If you want to add a new Grafana dashboard then this can be done through followi
 The application consists of 2 [Node-RED](https://nodered.org/) containers: 
 1. *node-red*: this editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
 2. *node-red-test* : this editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
-Note that both Node-RED editors are protected by a user name and password that must be set throught the environment variables `USERNAME` and  `PASSWORD`.  Note that the environment variable `PASSWORD` should contain the hashed password.  The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.
+Note that both Node-RED editors are protected by a user name and a hashed password that must be set throught the environment variables `USERNAME` and  `PASSWORD`. The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.  You can set these environment variables using your [Balena dashboard](https://dashboard.balena-cloud.com) either under:
+- *Application Environment Variables (E(X))* - this implies that both Node-RED instances will have the same username and password.
+- *Service Variables (S(X))*
 
 ## 6. MQTT broker
+This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
+1. *mqtt* which is listening to Host OS port 1883
+2. *mqtt-test* which is listening to Host OS port 1884
 
 ## 7. Setup of the USB memory Stick
+
 
 ## 8. Internet access via Balena's public URL and Nginx.
 
