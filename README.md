@@ -6,7 +6,7 @@ This project is actually a proof of concept to demonstrate the following feature
 2. The Built and Deployment of this multi container application using the **BalenaCloud** services (see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device)).
 3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 3. System resource monitoring ...](#3-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
 4. That **Grafana** is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](#41-updating--adding-new-grafana-dashboards)).
-5. It is possible to run multiple Node-RED instances on the same device.
+5. It is possible to run multiple Node-RED instances on the same device (see [5. Node-RED](#5-node-red)).
 6. It is possible to run multiple MQTT brokers on the same device.
 7. A USB memory stick connected to the pi can be used for storing specific data (in this case it is the influxdb data)
 8. It is possible to access the Grafana user interface and the 2 Node-RED editors over the internet by enabling the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container.
@@ -59,9 +59,11 @@ If you want to add a new Grafana dashboard then this can be done through followi
 
 ## 5. Node-RED
 The application consists of 2 [Node-RED](https://nodered.org/) containers: 
-- *Node-RED*: the editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
-- *Node-Red-Test* : the editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
-Both Node-RED editors are protected by a user name and password that must be set throught the environment variables `USERNAME` and  `PASSWORD`.  Note that the environment variable `PASSWORD` should contain the hashed password.
+1. *node-red*: this editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
+2. *node-red-test* : this editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
+Note that both Node-RED editors are protected by a user name and password that must be set throught the environment variables `USERNAME` and  `PASSWORD`.  Note that the environment variable `PASSWORD` should contain the hashed password.  The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.
+
+## 6. MQTT broker
 
 ## Credits
 1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)  [(github repository)](https://github.com/cirocosta/sample-grafana)
