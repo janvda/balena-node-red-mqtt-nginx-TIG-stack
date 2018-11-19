@@ -7,7 +7,7 @@ This project is actually a proof of concept to demonstrate the following feature
 3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 3. System resource monitoring ...](#3-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
 4. That **Grafana** is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](#41-updating--adding-new-grafana-dashboards)).
 5. It is possible to run multiple Node-RED instances on the same device (see [5. Node-RED](#5-node-red)).
-6. It is possible to run multiple MQTT brokers on the same device.
+6. It is possible to run multiple MQTT brokers on the same device (see [6. MQTT brokers](#6-mqtt-broker)).
 7. A USB memory stick connected to the pi can be used for storing specific data (in this case it is the influxdb data)
 8. It is possible to access the Grafana user interface and the 2 Node-RED editors over the internet by enabling the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container.
 
@@ -64,6 +64,11 @@ The application consists of 2 [Node-RED](https://nodered.org/) containers:
 Note that both Node-RED editors are protected by a user name and password that must be set throught the environment variables `USERNAME` and  `PASSWORD`.  Note that the environment variable `PASSWORD` should contain the hashed password.  The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.
 
 ## 6. MQTT broker
+
+## 7. Setup of the USB memory Stick
+
+## 8.Internet access via Balena's public URL and Nginx.
+
 
 ## Credits
 1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)  [(github repository)](https://github.com/cirocosta/sample-grafana)
