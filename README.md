@@ -60,8 +60,8 @@ If you want to add a new Grafana dashboard then this can be done through followi
 
 ## 5. Node-RED
 The application consists of 2 [Node-RED](https://nodered.org/) containers: 
-1. **node-red**: this editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
-2. **node-red-test** : this editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
+1. **node-red**: its editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
+2. **node-red-test** : its editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
 
 Note that both Node-RED editors are protected by a user name and a hashed password that must be set throught the environment variables `USERNAME` and  `PASSWORD`. The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.  You can set these environment variables using your [Balena dashboard](https://dashboard.balena-cloud.com) either under:
 - *Application Environment Variables (E(X))* - this implies that both Node-RED instances will have the same username and password.
