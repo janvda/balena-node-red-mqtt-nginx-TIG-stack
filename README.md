@@ -2,17 +2,17 @@
 
 ## Features
 This project is actually a proof of concept to demonstrate the following features:
-1. The ability to run many containers on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) (see [section 1. What](#1-what)).
-2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/) services.(see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device))
+1. The ability to run **many** containers on a **Raspberry Pi 3 Model B+** (see [section 1. What](#1-what)).
+2. The Built and Deployment of this multi container application using the **BalenaCloud** services.(see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device))
 3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 3. System resource monitoring ...](#3-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
-4. That [Grafana](https://grafana.com/) is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](https://github.com/janvda/balena-edge-device-monitoring/blob/node-red/README.md#41-updating--adding-new-grafana-dashboards)).
+4. That **Grafana** is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](https://github.com/janvda/balena-edge-device-monitoring/blob/node-red/README.md#41-updating--adding-new-grafana-dashboards)).
 5. It is possible to run multiple Node-RED instances on the same device.
 6. It is possible to run multiple MQTT brokers on the same device.
 7. A USB memory stick connected to the pi can be used for storing specific data (in this case it is the influxdb data)
 8. It is possible to access the Grafana user interface and the 2 Node-RED editors over the internet by enabling the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container.
 
 ## 1. What
-The `node-red` branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a raspberry pi) running the [balena OS](https://www.balena.io/os/).     
+The `node-red` branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)) running the [balena OS](https://www.balena.io/os/).     
 
 So, this application consists of the following 8 docker containers (= TIG stack + 2x Node-RED + 2x MQTT broker +  Nginx )
 1. [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) - agent for collecting and reporting metrics and events
@@ -23,7 +23,7 @@ So, this application consists of the following 8 docker containers (= TIG stack 
 4. [nginx](http://nginx.org/en/docs/) - configured as reverse-proxyserver so that the http/https request becomes routed to grafana (port 30000) and the http/https request for path `/node-red` become routed to node-red (port 1880).
 
 ## 2. How to install this application on an edge device
-It is very easy to install this application through following steps:
+It is very easy to install this application using the [BalenaCloud](https://www.balena.io/) services through following steps:
 1. [Balena Setup](https://www.balena.io/): you need a BalenaCloud account and your edge device must be running the BalenaOs.  You also need to create an application in your balena dashboard and associate your edge device to it (see balena documentation).
 2. clone this github repository (this can be done on any device where git is installed) through the following command `git clone https://github.com/janvda/balena-edge-device-monitoring.git` (instead of directly cloning the repository it migh be better to fork the github repository and then clone this forked repository).
 3. Move into this repository by command `cd balena-edge-device-monitoring`
@@ -39,8 +39,7 @@ The system resource monitoring is realized by the TIG stack and happens as follo
 3. The [Grafana](https://grafana.com/) container has a dashboard (see screenshot below) showing these system metrics that it has retrieved from the influxdb.
 
 ## 4. Grafana
-
-The Grafana user interface can be accessed at port 3000 of the host OS.
+The [Grafana](https://grafana.com/) user interface can be accessed at port 3000 of the host OS.
 The login and password is `admin`.
 The name of the dashboard is `system metrics`.
 
