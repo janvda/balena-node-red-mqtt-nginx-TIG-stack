@@ -77,12 +77,12 @@ The script `my_entrypoint.sh` has the additional instructions to mount this USB 
 Note that the current *Balena* version doesn't yet support the definition of a such a mounted drive in the docker compose yaml file therefore this is handled through the influxdb container setup as described here above.
 
 ## 8. Internet access via Balena's public URL and Nginx.
-The nginx container has been configured so that when you enable the Balena public URL that you can access the following applications over the internet:
-- *Grafana* User Interface via `<public URL>`
-- Node-RED editor of the container *node-red* via `<public URL>\node-red`
-- Node-Red dashboard UI of the container *node-red* via `<public URL>\node-red\ui`
-- Node-RED editor of the container *node-red-test* via `<public URL>\node-red-test`
-- Node-RED dashboard UI of the container *node-red-test* via `<public URL>\node-red-test\ui`
+The [nginx](http://nginx.org/en/docs/) container has been configured so that when you enable the Balena public device URL that you can access the following applications over the internet:
+- *Grafana* User Interface via `<public device URL>`
+- Node-RED editor of the container *node-red* via `<public device URL>\node-red`
+- Node-Red dashboard UI of the container *node-red* via `<public device URL>\node-red\ui`
+- Node-RED editor of the container *node-red-test* via `<public device URL>\node-red-test`
+- Node-RED dashboard UI of the container *node-red-test* via `<public device URL>\node-red-test\ui`
 
 
 ## Credits
