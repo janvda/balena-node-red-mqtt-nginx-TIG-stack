@@ -12,7 +12,7 @@ This project is actually a proof of concept to demonstrate the following feature
 8. It is possible to access the Grafana user interface and the 2 Node-RED editors **over the internet** by enabling the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container (see [see section 8. Internet Access](#8-internet-access-via-balenas-public-url-and-nginx)).
 
 ## 1. What
-The `node-red` branch of this github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)) running the [balena OS](https://www.balena.io/os/).     
+This github repository describes a composite docker application consisting of **"8"** containers that can be deployed through [BalenaCloud](https://www.balena.io/) on any arm device (e.g. a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)) running the [balena OS](https://www.balena.io/os/).     
 
 So, this application consists of the following 8 docker containers (= TIG stack + 2x Node-RED + 2x MQTT broker +  Nginx )
 1. [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) - agent for collecting and reporting metrics and events
