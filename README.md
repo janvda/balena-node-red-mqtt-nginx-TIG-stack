@@ -38,13 +38,15 @@ The system resource monitoring is realized by the TIG stack and happens as follo
 2. the [Influxdb](https://www.influxdata.com/) container that will store them in the influx database.  
 3. The [Grafana](https://grafana.com/) container has a dashboard (see screenshot below) showing these system metrics that it has retrieved from the influxdb.
 
+## 4. Grafana
+
 The Grafana user interface can directly be accessed (login and password is `admin`) at port 80 of the host OS thanks to reverse-proxyserver ningx.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
 
 Here below a screenshot of the `system metrics` dashboard that is also provisioned by this application ( file is `grafana\dashboards\system metrics.json`)
 
 ![system metrics example](./system_metrics_dashboard.png)
 
-## Updating / Adding new Grafana Dashboards
+## 4.1. Updating / Adding new Grafana Dashboards
 
 If you want to add a new Grafana dashboard then this can be done through following steps (Updating an existing dashboard can be done in a similar way):
 
