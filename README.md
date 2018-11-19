@@ -70,16 +70,16 @@ This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
 1. **mqtt** which is listening to Host OS port 1883
 2. **mqtt-test** which is listening to Host OS port 1884
 
-## 7. Setup of the USB memory Stick
+## 7. Setup of the USB memory Stick for Influxdb
 
 
 ## 8. Internet access via Balena's public URL and Nginx.
 The nginx container has been configured so that when you enable the Balena public URL that you can access the following applications over the internet:
 - *Grafana* User Interface via `<public URL>`
-- editor of the container *node-red* via `<public URL>\node-red`
-- UI of the container *node-red* via `<public URL>\node-red\ui`
-- editor of the container *node-red-test* via `<public URL>\node-red-test`
-- UI of the container *node-red-test* via `<public URL>\node-red-test\ui`
+- Node-RED editor of the container *node-red* via `<public URL>\node-red`
+- Node-Red dashboard UI of the container *node-red* via `<public URL>\node-red\ui`
+- Node-RED editor of the container *node-red-test* via `<public URL>\node-red-test`
+- Node-RED dashboard UI of the container *node-red-test* via `<public URL>\node-red-test\ui`
 
 
 ## Credits
