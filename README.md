@@ -5,7 +5,7 @@ This project is actually a proof of concept to demonstrate the following feature
 1. The ability to run many containers on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) (see [section 1. What](#1-what)).
 2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/) services.(see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device))
 3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 3. System resource monitoring ...](#3-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
-4. That [Grafana](https://grafana.com/) is very nice and powerful tool to create dashboards and that it is easy to create or update those dashboards.
+4. That [Grafana](https://grafana.com/) is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana))and that it is easy to create or update those dashboards.
 5. It is possible to run multiple Node-RED instances on the same device.
 6. It is possible to run multiple MQTT brokers on the same device.
 7. A USB memory stick connected to the pi can be used for storing specific data (in this case it is the influxdb data)
