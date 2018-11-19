@@ -40,7 +40,9 @@ The system resource monitoring is realized by the TIG stack and happens as follo
 
 ## 4. Grafana
 
-The Grafana user interface can directly be accessed (login and password is `admin`) at port 80 of the host OS thanks to reverse-proxyserver ningx.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
+The Grafana user interface can be accessed at port 3000 of the host OS.
+The login and password is `admin`.
+The name of the dashboard is `system metrics`.
 
 Here below a screenshot of the `system metrics` dashboard that is also provisioned by this application ( file is `grafana\dashboards\system metrics.json`)
 
