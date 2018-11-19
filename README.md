@@ -8,7 +8,7 @@ This project is actually a proof of concept to demonstrate the following feature
 4. That **Grafana** is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](#41-updating--adding-new-grafana-dashboards)).
 5. It is possible to run **multiple Node-RED instances** on the same device (see [section 5. Node-RED](#5-node-red)).
 6. It is possible to run **multiple MQTT brokers** on the same device (see [section 6. MQTT brokers](#6-mqtt-broker)).
-7. A **USB memory stick** connected to the pi can be used for storing specific data (in this case it is the influxdb data) (see [section 7. USB memory stick](#7-setup-of-the-usb-memory-stick)).
+7. A **USB memory stick** connected to the pi can be used for storing specific data (in this case it is the influxdb data) (see [section 7. USB memory stick](#7-setup-of-the-usb-memory-stick-for-influxdb)).
 8. It is possible to access the Grafana user interface and the 2 Node-RED editors **over the internet** by enabling the Balena public URL and properly configuring the [nginx](http://nginx.org/en/docs/) container (see [see section 8. Internet Access](#8-internet-access-via-balenas-public-url-and-nginx)).
 
 ## 1. What
