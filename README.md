@@ -25,7 +25,7 @@ So, this application consists of the following 8 docker containers (= TIG stack 
 ![build finished successful](./build%20finished%20successful.png)
 
 ## 2. How to install this application on an edge device
-This application can easily be installed through following steps:
+It is very easy to install this application through following steps:
 1. [Balena Setup](https://www.balena.io/): you need a BalenaCloud account and your edge device must be running the BalenaOs.  You also need to create an application in your balena dashboard and associate your edge device to it (see balena documentation).
 2. clone this github repository (this can be done on any device where git is installed) through the following command `git clone https://github.com/janvda/balena-edge-device-monitoring.git` (instead of directly cloning the repository it migh be better to fork the github repository and then clone this forked repository).
 3. Move into this repository by command `cd balena-edge-device-monitoring`
