@@ -3,7 +3,7 @@
 ## Features
 This project is actually a proof of concept to demonstrate the following features:
 1. The ability to run many containers on a [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) (see [1. What](#1-what)).
-2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/) services.
+2. The Built and Deployment of this multi container application using the [BalenaCloud](https://www.balena.io/) services.(see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device))
 3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 3.](#3-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
 4. That [Grafana](https://grafana.com/) is very nice and powerful tool to create dashboards and that it is easy to create or update those dashboards.
 5. It is possible to run multiple Node-RED instances on the same device.
@@ -22,8 +22,6 @@ So, this application consists of the following 8 docker containers (= TIG stack 
 5. 2x [MQTT-broker](https://mosquitto.org/) - lightweight message broker
 4. [nginx](http://nginx.org/en/docs/) - configured as reverse-proxyserver so that the http/https request becomes routed to grafana (port 30000) and the http/https request for path `/node-red` become routed to node-red (port 1880).
 
-![build finished successful](./build%20finished%20successful.png)
-
 ## 2. How to install this application on an edge device
 It is very easy to install this application through following steps:
 1. [Balena Setup](https://www.balena.io/): you need a BalenaCloud account and your edge device must be running the BalenaOs.  You also need to create an application in your balena dashboard and associate your edge device to it (see balena documentation).
@@ -31,6 +29,8 @@ It is very easy to install this application through following steps:
 3. Move into this repository by command `cd balena-edge-device-monitoring`
 4. Add balena git remote endpoint by running the command `git remote add balena <USERNAME>@git.www.balena.io:<USERNAME>/<APPNAME>.git`
 5. push the repository to balena by the command `git push balena master` (maybe you need to add the option `--force` the first time you are deploying).
+
+![build finished successful](./build%20finished%20successful.png)
 
 ## 3. System resource monitoring using the TIG Stack (Telegraf, Influxdb & Grafana)
 The system resource monitoring is realized by the TIG stack and happens as follows:
