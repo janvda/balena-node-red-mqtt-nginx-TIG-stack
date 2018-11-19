@@ -59,21 +59,27 @@ If you want to add a new Grafana dashboard then this can be done through followi
 
 ## 5. Node-RED
 The application consists of 2 [Node-RED](https://nodered.org/) containers: 
-1. *node-red*: this editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
-2. *node-red-test* : this editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
+1. **node-red**: this editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
+2. **node-red-test** : this editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
 Note that both Node-RED editors are protected by a user name and a hashed password that must be set throught the environment variables `USERNAME` and  `PASSWORD`. The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.  You can set these environment variables using your [Balena dashboard](https://dashboard.balena-cloud.com) either under:
 - *Application Environment Variables (E(X))* - this implies that both Node-RED instances will have the same username and password.
 - *Service Variables (S(X))*
 
 ## 6. MQTT broker
 This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
-1. *mqtt* which is listening to Host OS port 1883
-2. *mqtt-test* which is listening to Host OS port 1884
+1. **mqtt** which is listening to Host OS port 1883
+2. **mqtt-test** which is listening to Host OS port 1884
 
 ## 7. Setup of the USB memory Stick
 
 
 ## 8. Internet access via Balena's public URL and Nginx.
+The nginx container has been configured so that when you enable the Balena public URL that you can access the following applications over the internet:
+- *Grafana* User Interface via `<public URL>`
+- editor of the container *node-red* via `<public URL>\node-red`
+- UI of the container *node-red* via `<public URL>\node-red\ui`
+- editor of the container *node-red-test* via `<public URL>\node-red-test`
+- UI of the container *node-red-test* via `<public URL>\node-red-test\ui`
 
 
 ## Credits
