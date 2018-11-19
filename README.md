@@ -22,8 +22,16 @@ So, this application consists of the following 8 docker containers (= TIG stack 
 5. 2x [MQTT-broker](https://mosquitto.org/) - lightweight message broker
 4. [nginx](http://nginx.org/en/docs/) - is open source software for web serving, reverse proxying, caching, load balancing,....
 
+
 ## 2. How to install this application on an edge device
 It is very easy to install this application using the [BalenaCloud](https://www.balena.io/) services through following steps:
+
+The Grafana user interface can be accessed (login and password is `admin`) at port 30000 of the host OS, but thanks to nginx (reverse proxy) it can also be accessed at port 80 of the host OS.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
+
+Here below a screenshot of the `system metrics` dashboard that is also provisioned by this application ( file is `grafana\dashboards\system metrics.json`)
+
+![system metrics example](./system_metrics_dashboard.png)
+
 1. [Balena Setup](https://www.balena.io/): you need a BalenaCloud account and your edge device must be running the BalenaOs.  You also need to create an application in your balena dashboard and associate your edge device to it (see balena documentation).
 2. clone this github repository (this can be done on any device where git is installed) through the following command `git clone https://github.com/janvda/balena-edge-device-monitoring.git` (instead of directly cloning the repository it migh be better to fork the github repository and then clone this forked repository).
 3. Move into this repository by command `cd balena-edge-device-monitoring`
