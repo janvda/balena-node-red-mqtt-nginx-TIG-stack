@@ -3,9 +3,9 @@
 ## Features
 This project is actually a proof of concept to demonstrate the following features:
 1. The ability to run **many** containers on a **Raspberry Pi 3 Model B+** (see [section 1. What](#1-what)).
-2. The Built and Deployment of this multi container application using the **BalenaCloud** services.(see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device))
+2. The Built and Deployment of this multi container application using the **BalenaCloud** services (see [section 2. How to install ...](#2-how-to-install-this-application-on-an-edge-device)).
 3. Monitoring the system resources of the raspberry pi using the **TIG** stack (see [section 3. System resource monitoring ...](#3-system-resource-monitoring-using-the-tig-stack-telegraf-influxdb--grafana)):
-4. That **Grafana** is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](https://github.com/janvda/balena-edge-device-monitoring/blob/node-red/README.md#41-updating--adding-new-grafana-dashboards)).
+4. That **Grafana** is very nice and powerful tool to create dashboards  (see [section 4. Grafana](#4-grafana)) and that it is easy to create or update those dashboards (see [section 4.1 Updating and adding ...](#41-updating--adding-new-grafana-dashboards)).
 5. It is possible to run multiple Node-RED instances on the same device.
 6. It is possible to run multiple MQTT brokers on the same device.
 7. A USB memory stick connected to the pi can be used for storing specific data (in this case it is the influxdb data)
@@ -20,7 +20,7 @@ So, this application consists of the following 8 docker containers (= TIG stack 
 3. [Grafana](https://grafana.com/) - create, explore and share dashboards
 4. 2x [Node-RED](https://nodered.org/) - flow based programming for the Internet of Things (accessible through path `/nodered` )
 5. 2x [MQTT-broker](https://mosquitto.org/) - lightweight message broker
-4. [nginx](http://nginx.org/en/docs/) - configured as reverse-proxyserver so that the http/https request becomes routed to grafana (port 30000) and the http/https request for path `/node-red` become routed to node-red (port 1880).
+4. [nginx](http://nginx.org/en/docs/) - is open source software for web serving, reverse proxying, caching, load balancing,....
 
 ## 2. How to install this application on an edge device
 It is very easy to install this application using the [BalenaCloud](https://www.balena.io/) services through following steps:
@@ -56,6 +56,12 @@ If you want to add a new Grafana dashboard then this can be done through followi
 3. Save the json contents you have copied in previous step into a new file in folder `grafana\dashboards` with extension .json  (e.g. `mydashboard-02.json`)
 4. Substitute the ID number you can fiInfluxDB system metrics dashboard]nd in that file just after field `"graphTooltip"` by `null`.  E.g. ` "id": 1,` should be changed into ` "id": null,`
 5. Commit your changes in git and push them to your balena git remote endpoint (`git push balena master`)
+
+## 5. Node-RED
+The application consists of 2 [Node-RED](https://nodered.org/) containers: 
+- *Node-RED*: the editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
+- *Node-Red-Test* : the editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
+Both Node-RED editors are protected by a user name and password that must be set throught the environment variables `USERNAME` and  `PASSWORD`.  Note that the environment variable `PASSWORD` should contain the hashed password.
 
 ## Credits
 1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)  [(github repository)](https://github.com/cirocosta/sample-grafana)
