@@ -46,7 +46,8 @@ The name of the dashboard is `system metrics`.
 
 Here below a screenshot of the `system metrics` dashboard that is also provisioned by this application ( file is `grafana\dashboards\system metrics.json`)
 
-![system metrics example](./system_metrics_dashboard.png)
+![system metrics example top part](./system_metrics_dashboard_1_of_2.png)
+![system metrics example bottom part](./system_metrics_dashboard_2_of_2.png)
 
 ## 4.1. Updating / Adding new Grafana Dashboards
 
