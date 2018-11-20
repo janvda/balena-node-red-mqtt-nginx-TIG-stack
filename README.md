@@ -25,17 +25,10 @@ So, this application consists of the following 8 docker containers (= TIG stack 
 
 ## 2. How to install this application on an edge device
 It is very easy to install this application using the [BalenaCloud](https://www.balena.io/) services through following steps:
-
-The Grafana user interface can be accessed (login and password is `admin`) at port 30000 of the host OS, but thanks to nginx (reverse proxy) it can also be accessed at port 80 of the host OS.  This also means that you can access it through the `public device URL` that you can find in your [BalenaCloud](https://www.balena.io/) dashboard.  In other words you can access your Grafana dashboards wherever you have internet access !
-
-Here below a screenshot of the `system metrics` dashboard that is also provisioned by this application ( file is `grafana\dashboards\system metrics.json`)
-
-![system metrics example](./system_metrics_dashboard.png)
-
 1. [Balena Setup](https://www.balena.io/): you need a BalenaCloud account and your edge device must be running the BalenaOs.  You also need to create an application in your balena dashboard and associate your edge device to it (see balena documentation).
-2. clone this github repository (this can be done on any device where git is installed) through the following command `git clone https://github.com/janvda/balena-edge-device-monitoring.git` (instead of directly cloning the repository it migh be better to fork the github repository and then clone this forked repository).
+2. clone this github repository (this can be done on any device where git is installed) through the following command `git clone https://github.com/janvda/balena-node-red-mqtt-nginx-TIG-stack.git` (instead of directly cloning the repository it migh be better to fork the github repository and then clone this forked repository).
 3. Move into this repository by command `cd balena-edge-device-monitoring`
-4. Add balena git remote endpoint by running the command `git remote add balena <USERNAME>@git.www.balena.io:<USERNAME>/<APPNAME>.git`
+4. Add balena git remote endpoint by running a command like `git remote add balena <USERNAME>@git.www.balena.io:<USERNAME>/<APPNAME>.git`
 5. push the repository to balena by the command `git push balena master` (maybe you need to add the option `--force` the first time you are deploying).
 
 ![build finished successful](./build%20finished%20successful.png)
@@ -67,8 +60,8 @@ If you want to add a new Grafana dashboard then this can be done through followi
 
 ## 5. Node-RED
 The application consists of 2 [Node-RED](https://nodered.org/) containers: 
-1. **node-red**: this editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
-2. **node-red-test** : this editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
+1. **node-red**: its editor is accessble through Host OS port and path : `<Host OS>:1880/node-red/`
+2. **node-red-test** : its editor is accessble through Host OS port and path : `<Host OS>:1882/node-red-test/`
 
 Note that both Node-RED editors are protected by a user name and a hashed password that must be set throught the environment variables `USERNAME` and  `PASSWORD`. The [Node-RED security page](https://nodered.org/docs/security) describes how a password hash can be generated.  You can set these environment variables using your [Balena dashboard](https://dashboard.balena-cloud.com) either under:
 - *Application Environment Variables (E(X))* - this implies that both Node-RED instances will have the same username and password.
