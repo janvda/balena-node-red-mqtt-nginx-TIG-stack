@@ -7,11 +7,6 @@ services:
     build: influxdb
     # privileged added so usb drive can be mounted.
     privileged: true
-    #volumes:
-      # Mount for influxdb data directory
-      #- 'influx-data:/var/lib/influxdb'
-      # Mount for influxdb configuration
-      # 'influx-config:/etc/influxdb/'
     ports:
       # The API for InfluxDB is served on port 8086
       - "8086:8086"
@@ -68,6 +63,7 @@ services:
     depends_on:
       - grafana
       - node-red
+      - node-red-test
     ports:
        - "80:80"
        - "443:443"
