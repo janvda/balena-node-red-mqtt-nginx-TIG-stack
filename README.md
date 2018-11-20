@@ -85,7 +85,9 @@ This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
 The *influxdb* container is configured so that its data will be stored on a USB memory stick connected to the raspberry that has label `influxdb` and that is formatted in the `ext4` format as is specified in the influxdb Dockerfile.
 The script `my_entrypoint.sh` has the additional instructions to mount this USB memory stick inside the influxdb container.
 
-Note that the current *Balena* version doesn't yet support the definition of a such a mounted drive in the docker compose yaml file therefore this is handled through the influxdb container setup as described here above.
+Notes
+1. the current *Balena* version doesn't yet support the definition of a volume for such a mounted drive in the docker compose yaml file therefore this is handled through the influxdb container setup as described here above.
+2. It is not possible to mount the same USB drive also in telegraf container (I have tried that) and consequently telegraf it is not able to report the `disk` metrics for this USB drive.
 
 ## 8. Internet access via Balena's public URL and Nginx.
 The [nginx](http://nginx.org/en/docs/) container has been configured so that when you enable the Balena public device URL that you can access the following applications over the internet:
