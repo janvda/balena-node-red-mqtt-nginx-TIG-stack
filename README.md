@@ -90,7 +90,7 @@ The [nginx](http://nginx.org/en/docs/) container has been configured so that whe
 - Node-RED editor of the container *node-red-test* via `<public device URL>\node-red-test`
 - Node-RED dashboard UI of the container *node-red-test* via `<public device URL>\node-red-test\ui`
 
-In case you get a `502 Bad Gateway`error when trying to access the above public URLs then this might be fixed by restarting the nginx container !
+In case you get a `502 Bad Gateway`error or a message like `Cannot GET /node-red-test/` when trying to access the above public URLs then this might be fixed by restarting the nginx container !
 
 ## Credits
 1. [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/)  [(github repository)](https://github.com/cirocosta/sample-grafana)
