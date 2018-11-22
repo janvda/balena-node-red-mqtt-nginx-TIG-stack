@@ -11,7 +11,7 @@ services:
     environment:
         - INFLUXDB_DATA_FSTAB = "LABEL=influxdb /mnt/usbdrive ext4 rw,relatime,discard,data=ordered 0 2"
     volumes:
-        - 'influxdb-data:/data'   
+        - 'influxdb-data:/mnt/usbdrive'   
     ports:
       # The API for InfluxDB is served on port 8086
       - "8086:8086"
