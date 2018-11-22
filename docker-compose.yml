@@ -2,11 +2,16 @@ version: '2'
 volumes:
     node-red-data:
     node-red-test-data:
+    influxdb-data:
 services:
   influxdb:
     build: influxdb
     # privileged added so usb drive can be mounted.
     privileged: true
+    environment:
+        - INFLUXDB_DATA_FSTAB = "LABEL=influxdb /mnt/usbdrive ext4 rw,relatime,discard,data=ordered 0 2"
+    volumes:
+        - 'influxdb-data:/data'   
     ports:
       # The API for InfluxDB is served on port 8086
       - "8086:8086"
