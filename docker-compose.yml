@@ -26,8 +26,8 @@ services:
     network_mode: "host"
     privileged: true
     labels:
-      # io.resin.features.balena-socket: '1'
-      io.balena.features.balena-socket: '1'
+      io.resin.features.balena-socket: '1'
+      # io.balena.features.balena-socket: '1'
     depends_on:
       - influxdb
     restart: always
