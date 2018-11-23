@@ -18,7 +18,7 @@
   "gnetId": 1138,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1542730758550,
+  "iteration": 1543014739894,
   "links": [],
   "panels": [
     {
@@ -289,9 +289,9 @@
       "colorBackground": false,
       "colorValue": false,
       "colors": [
-        "rgba(50, 172, 45, 0.97)",
+        "rgba(245, 54, 54, 0.9)",
         "rgba(237, 129, 40, 0.89)",
-        "rgba(245, 54, 54, 0.9)"
+        "rgba(50, 172, 45, 0.97)"
       ],
       "datasource": "telegraf_ds",
       "editable": true,
@@ -393,7 +393,7 @@
           ]
         }
       ],
-      "thresholds": "70,85",
+      "thresholds": "20,40",
       "title": "Memory available",
       "transparent": true,
       "type": "singlestat",

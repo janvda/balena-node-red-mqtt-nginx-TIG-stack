@@ -17,7 +17,7 @@
   "gnetId": 1150,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1543013823545,
+  "iteration": 1543014926870,
   "links": [],
   "panels": [
     {
@@ -30,7 +30,7 @@
       "error": false,
       "fill": 1,
       "gridPos": {
-        "h": 7,
+        "h": 5,
         "w": 10,
         "x": 0,
         "y": 0
@@ -173,7 +173,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 5,
         "w": 4,
         "x": 10,
         "y": 0
@@ -293,7 +293,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 5,
         "w": 4,
         "x": 14,
         "y": 0
@@ -413,7 +413,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 5,
         "w": 6,
         "x": 18,
         "y": 0
@@ -526,20 +526,21 @@
       "datasource": "telegraf_ds",
       "editable": true,
       "error": false,
-      "fill": 1,
+      "fill": 2,
       "gridPos": {
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 5
       },
-      "id": 3,
+      "id": 9,
       "legend": {
         "alignAsTable": true,
-        "avg": true,
+        "avg": false,
         "current": true,
+        "hideEmpty": false,
         "max": true,
-        "min": false,
+        "min": true,
         "rightSide": true,
         "show": true,
         "total": false,
@@ -555,10 +556,11 @@
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": false,
+      "stack": true,
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:721",
           "alias": "$tag_container_name",
           "dsType": "influxdb",
           "expr": "",
@@ -583,7 +585,8 @@
             }
           ],
           "intervalFactor": 2,
-          "measurement": "docker_container_cpu",
+          "measurement": "docker_container_mem",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
           "resultFormat": "time_series",
@@ -591,7 +594,7 @@
             [
               {
                 "params": [
-                  "usage_percent"
+                  "usage"
                 ],
                 "type": "field"
               },
@@ -613,14 +616,13 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "CPU global usage",
+      "title": "Memory usage",
       "tooltip": {
         "msResolution": false,
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
-      "transparent": true,
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -631,7 +633,7 @@
       },
       "yaxes": [
         {
-          "format": "percent",
+          "format": "bytes",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -662,10 +664,10 @@
       "error": false,
       "fill": 1,
       "gridPos": {
-        "h": 8,
-        "w": 10,
+        "h": 9,
+        "w": 7,
         "x": 0,
-        "y": 16
+        "y": 14
       },
       "id": 5,
       "legend": {
@@ -881,24 +883,24 @@
       "datasource": "telegraf_ds",
       "editable": true,
       "error": false,
-      "fill": 2,
+      "fill": 1,
       "gridPos": {
-        "h": 8,
-        "w": 14,
-        "x": 10,
-        "y": 16
+        "h": 9,
+        "w": 17,
+        "x": 7,
+        "y": 14
       },
-      "id": 9,
+      "id": 3,
       "legend": {
         "alignAsTable": true,
-        "avg": false,
-        "current": false,
-        "max": false,
+        "avg": true,
+        "current": true,
+        "max": true,
         "min": false,
         "rightSide": true,
         "show": true,
         "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
@@ -910,7 +912,7 @@
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": true,
+      "stack": false,
       "steppedLine": false,
       "targets": [
         {
@@ -938,7 +940,7 @@
             }
           ],
           "intervalFactor": 2,
-          "measurement": "docker_container_mem",
+          "measurement": "docker_container_cpu",
           "policy": "default",
           "refId": "A",
           "resultFormat": "time_series",
@@ -946,7 +948,7 @@
             [
               {
                 "params": [
-                  "usage"
+                  "usage_percent"
                 ],
                 "type": "field"
               },
@@ -968,13 +970,14 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Memory usage",
+      "title": "CPU global usage",
       "tooltip": {
         "msResolution": false,
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
+      "transparent": true,
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -985,7 +988,7 @@
       },
       "yaxes": [
         {
-          "format": "bytes",
+          "format": "percent",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1019,7 +1022,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 23
       },
       "id": 8,
       "legend": {
@@ -1240,8 +1243,8 @@
         "allValue": null,
         "current": {
           "tags": [],
-          "text": "telegraf_642982_676605",
-          "value": "telegraf_642982_676605"
+          "text": "node-red-test_642987_676605",
+          "value": "node-red-test_642987_676605"
         },
         "datasource": "telegraf_ds",
         "hide": 0,
@@ -1294,5 +1297,5 @@
   "timezone": "browser",
   "title": "docker containers",
   "uid": "K-0EGGkgz",
-  "version": 3
+  "version": 1
 }
