@@ -9,7 +9,7 @@ services:
     # privileged added so usb drive can be mounted.
     privileged: true
     volumes:
-        - 'influxdb-data:/mnt/usbdrive'   
+        - 'influxdb-data:/mnt/influxdb'   
     ports:
       # The API for InfluxDB is served on port 8086
       - "8086:8086"
