@@ -76,8 +76,10 @@ This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
 2. **mqtt-test** which is listening to Host OS port 1884
 
 ## 7. Setup of the USB memory Stick for Influxdb
-The *influxdb* container is configured so that its data will be stored on a USB memory stick connected to the raspberry that has label `influxdb` and that is formatted in the `ext4` format as is specified in the influxdb Dockerfile.
-The script `my_entrypoint.sh` has the additional instructions to mount this USB memory stick inside the influxdb container.
+The data of the influxdb will be stored in the mount location `\mnt\influxdb`.
+The *influxdb* container is configured (see Dockerfile and my_entrypoint.sh) so that a USB drive (e.g. a USB memory stick) with label `influxdb` will be mounted to this mount location.  It is currently also expecting (see Dockerfile) that this USB drive is formatted in `ext4` format.
+
+If no USB drive (or memory stick) with label `influxdb` is connected to the raspberry pi then the named volume `influxdb-data` will be mounted to this location as is specified in the `docker-compose.yml` file.
 
 Notes
 1. the current *Balena* version doesn't yet support the definition of a volume for such a mounted drive in the docker compose yaml file therefore this is handled through the influxdb container setup as described here above.
