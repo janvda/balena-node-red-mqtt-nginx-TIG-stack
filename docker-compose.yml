@@ -9,6 +9,8 @@ services:
     # privileged added so usb drive can be mounted.
     privileged: true
     volumes:
+        # take care that the mount location "/mnt/influxdb" becomes overwritten
+        # by the mount location specified in the influxdb Dockerfile.
         - 'influxdb-data:/mnt/influxdb'   
     ports:
       # The API for InfluxDB is served on port 8086
