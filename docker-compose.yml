@@ -6,6 +6,7 @@ volumes:
 services:
   influxdb:
     build: influxdb
+    container_name: influxdb
     # privileged added so usb drive can be mounted.
     privileged: true
     volumes:
