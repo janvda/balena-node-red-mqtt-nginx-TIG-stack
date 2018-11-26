@@ -11,3 +11,4 @@ RUN npm install node-red-contrib-credentials
 RUN npm install appmetrics
 
 COPY ./settings.js /data/settings.js
+COPY ./appmetrics.properties /usr/src/node-red/node_modules/appmetrics/appmetrics.properties
