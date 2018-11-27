@@ -184,7 +184,7 @@ module.exports = {
         header: {
             title: "Node-RED Test",
             // image: "/usr/src/app/assets/resin_logo.png", // or null to remove image
-            url: "https://github.com/janvda/balena-edge-device-monitoring/blob/node-red/README.md"
+            url: "https://github.com/janvda/balena-node-red-mqtt-nginx-TIG-stack/blob/master/README.md"
         },
        projects: {
            enabled: true
