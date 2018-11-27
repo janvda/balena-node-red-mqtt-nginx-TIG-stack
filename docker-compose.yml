@@ -61,6 +61,8 @@ services:
        - 'node-red-test-data:/data'
     ports:
        - "1882:1880"
+       # port for appmetrics dashboard.
+       - "3001:3001"
     depends_on:
         - mqtt-test
     restart: always
