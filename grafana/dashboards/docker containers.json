@@ -17,7 +17,7 @@
   "gnetId": 1150,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1543337275441,
+  "iteration": 1543436369641,
   "links": [],
   "panels": [
     {
@@ -397,7 +397,7 @@
       "fill": 1,
       "gridPos": {
         "h": 4,
-        "w": 10,
+        "w": 13,
         "x": 11,
         "y": 0
       },
@@ -1237,6 +1237,12 @@
                   "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -1296,6 +1302,12 @@
                   "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -1336,7 +1348,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:1865",
-          "format": "bytes",
+          "format": "Bps",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1373,7 +1385,7 @@
         "x": 9,
         "y": 18
       },
-      "id": 8,
+      "id": 12,
       "legend": {
         "alignAsTable": true,
         "avg": true,
@@ -1452,6 +1464,12 @@
                   "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -1511,6 +1529,12 @@
                   "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -1545,7 +1569,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:2056",
-          "format": "bytes",
+          "format": "Bps",
           "label": null,
           "logBase": 1,
           "max": null,
