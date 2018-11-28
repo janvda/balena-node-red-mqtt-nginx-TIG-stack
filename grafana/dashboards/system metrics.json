@@ -18,7 +18,7 @@
   "gnetId": 1138,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1543014739894,
+  "iteration": 1543431215855,
   "links": [],
   "panels": [
     {
@@ -2318,12 +2318,19 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "seriesOverrides": [],
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:1491",
+          "alias": "Write bytes",
+          "transform": "negative-Y"
+        }
+      ],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
         {
+          "$$hashKey": "object:249",
           "alias": "Read bytes",
           "dsType": "influxdb",
           "expr": "",
@@ -2344,6 +2351,7 @@
           "hide": false,
           "intervalFactor": 2,
           "measurement": "diskio",
+          "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT derivative(mean(\"read_bytes\"), 5m) FROM \"diskio\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($interval) fill(null)",
           "rawQuery": false,
@@ -2363,9 +2371,15 @@
               },
               {
                 "params": [
-                  "1m"
+                  "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -2378,6 +2392,7 @@
           ]
         },
         {
+          "$$hashKey": "object:250",
           "alias": "Write bytes",
           "dsType": "influxdb",
           "expr": "",
@@ -2397,6 +2412,7 @@
           ],
           "intervalFactor": 2,
           "measurement": "diskio",
+          "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
           "resultFormat": "time_series",
@@ -2414,9 +2430,15 @@
               },
               {
                 "params": [
-                  "1m"
+                  "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -2449,7 +2471,8 @@
       },
       "yaxes": [
         {
-          "format": "bytes",
+          "$$hashKey": "object:595",
+          "format": "Bps",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2457,6 +2480,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:596",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2507,6 +2531,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:1419",
           "alias": "Bytes OUT",
           "transform": "negative-Y"
         }
@@ -2554,9 +2579,15 @@
               },
               {
                 "params": [
-                  "1s"
+                  "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -2613,9 +2644,15 @@
               },
               {
                 "params": [
-                  "1s"
+                  "10s"
                 ],
                 "type": "derivative"
+              },
+              {
+                "params": [
+                  " / 10"
+                ],
+                "type": "math"
               }
             ]
           ],
@@ -3213,7 +3250,7 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
