@@ -15,8 +15,8 @@ services:
         - 'influxdb-data:/mnt/influxdb'   
     ports:
       # The API for InfluxDB is served on port 8086
-      - "8086:8086"
       - "8082:8082"
+      - "8086:8086"
       # UDP Port
       - "8089:8089"
     restart: always
