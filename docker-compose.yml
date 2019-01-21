@@ -33,7 +33,7 @@ services:
     restart: always
     environment:
        - interval=60s
-       - flush_interval=30s
+       - flush_interval=60s
   grafana:
     build: grafana 
     ports:
