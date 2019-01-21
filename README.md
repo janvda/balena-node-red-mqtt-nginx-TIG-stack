@@ -40,7 +40,8 @@ The system resource monitoring is realized by the TIG stack and happens as follo
 3. The [Grafana](https://grafana.com/) container has a dashboard (see screenshot below) showing these system metrics that it has retrieved from the influxdb.
 
 ## 3.1 Telegraf
-The table below specifies the environment variables.  Note that the `Default Value` is defined in `docker-compose.yml`
+The table below specifies the environment variables that can be set in the Balena Device Service Variables panel for the Telegraf Service.  Note that the `Default Value` is defined in `docker-compose.yml`
+
 | Name                     | Default Value  |  Description                                    |
 |------------------------- | -------------- |-------------------------------------------------|
 | **interval**             |    `60s`       | Frequency at which metrics are collected        |
