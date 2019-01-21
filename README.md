@@ -39,6 +39,13 @@ The system resource monitoring is realized by the TIG stack and happens as follo
 2. the [Influxdb](https://www.influxdata.com/) container that will store them in the influx database.  
 3. The [Grafana](https://grafana.com/) container has a dashboard (see screenshot below) showing these system metrics that it has retrieved from the influxdb.
 
+## 3.1 Telegraf
+The table below specifies the environment variables.  Note that the `Default Value` is defined in `docker-compose.yml`
+| Name                     | Default Value  |  Description                                    |
+|------------------------- | -------------- |-------------------------------------------------|
+| **interval**             |    `60s`       | Frequency at which metrics are collected        |
+| **flush_interval**       |    `60s`       | Flushing interval (should not set < `interval`) |
+
 ## 4. Grafana
 The [Grafana](https://grafana.com/) user interface can be accessed at port 3000 of the host OS.
 The login and password is `admin`.
