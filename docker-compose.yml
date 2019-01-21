@@ -31,6 +31,9 @@ services:
     depends_on:
       - influxdb
     restart: always
+    environment:
+       - interval=60s
+       - flush_interval=30s
   grafana:
     build: grafana 
     ports:
