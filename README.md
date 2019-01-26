@@ -76,7 +76,7 @@ Note that both Node-RED editors are protected by a user name and a **hashed** pa
 - *Application Environment Variables (E(X))* - this implies that both Node-RED instances will have the same username and password.
 - *Service Variables (S(X))*
 
-Note also that a `node-red-data` and `node-red-test-data` are 2 named volumed used for the `\data` folder of respectively *node-red* and *node-red-test*.  Take care that the `settings.js` is only copied during the initial deployment of the application.  So take care that when the application is redeployed e.g. due to changes, then the `settings.js` is not recopied to the `\data` folder. (see also [How to copy a file to a named volume?](https://forums.balena.io/t/how-to-copy-a-file-to-a-named-volume/4331))
+Note also that `node-red-data` and `node-red-test-data` are 2 named volumed used for the `\data` folder of respectively *node-red* and *node-red-test*.  Take care that the `settings.js` is only copied during the initial deployment of the application.  So when the application is redeployed e.g. due to changes, then the `settings.js` is not recopied to the `\data` folder. (see also [How to copy a file to a named volume?](https://forums.balena.io/t/how-to-copy-a-file-to-a-named-volume/4331))
 
 ## 6. MQTT broker
 This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
