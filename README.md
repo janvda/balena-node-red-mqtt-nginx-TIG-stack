@@ -64,7 +64,7 @@ If you want to add a new Grafana dashboard then this can be done through followi
 1. Create the new dashboard using the Grafana UI.
 2. From the settings menu in Grafana UI select `View JSON` and copy the complete json file (**don't use the grafana UI `export` feature** as this will template the datasource and will not work due to that).
 3. Save the json contents you have copied in previous step into a new file in folder `grafana\dashboards` with extension .json  (e.g. `mydashboard-02.json`)
-4. Substitute the ID number you can fiInfluxDB system metrics dashboard]nd in that file just after field `"graphTooltip"` by `null`.  E.g. ` "id": 1,` should be changed into ` "id": null,`
+4. Substitute the ID number you can find in that file just after field `"graphTooltip"` by `null`.  E.g. ` "id": 1,` should be changed into ` "id": null,`
 5. Commit your changes in git and push them to your balena git remote endpoint (`git push balena master`)
 
 ## 5. Node-RED
