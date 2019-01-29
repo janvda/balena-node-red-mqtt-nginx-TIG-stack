@@ -76,7 +76,9 @@ Note that both Node-RED editors are protected by a user name and a **hashed** pa
 - *Application Environment Variables (E(X))* - this implies that both Node-RED instances will have the same username and password.
 - *Service Variables (S(X))*
 
-Note also that `node-red-data` and `node-red-test-data` are 2 named volumed used for the `\data` folder of respectively *node-red* and *node-red-test*.  Take care that the `settings.js` is only copied during the initial deployment of the application.  So when the application is redeployed e.g. due to changes, then the `settings.js` is not recopied to the `\data` folder. (see also [How to copy a file to a named volume?](https://forums.balena.io/t/how-to-copy-a-file-to-a-named-volume/4331))
+*Notes:*
+1. `node-red-data` and `node-red-test-data` are 2 named volumed used for the `\data` folder of respectively *node-red* and *node-red-test*.  Take care that the `settings.js` is only copied during the initial deployment of the application.  So when the application is redeployed e.g. due to changes, then the `settings.js` is not recopied to the `\data` folder. (see also [How to copy a file to a named volume?](https://forums.balena.io/t/how-to-copy-a-file-to-a-named-volume/4331))
+2. In order to assure that nodes installed through `npm install` are not lost after a restart of the container, you must assure that they are installed in the `\data` directory. So you must first do a `cd \data` and then execute the `npm install ....` command. This will assure that the node is correctly installed under folder `\data\node_modules\` and that it will persist after restarts of the container.
 
 ## 6. MQTT broker
 This application consist of 2 [Mosquitto MQTT-brokers](https://mosquitto.org/):
